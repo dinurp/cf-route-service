@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2022 2022 Dinu Pavithran <dinu.pavithran@yahoo.com>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+---
+applications:
+- name: auth-route-service
+  path: src
+  instances: 2
+  memory: 1M
+  disk_quota: 12M
+  buildpacks:
+  - go_buildpack
+  env:
+    GOVERSION: 1.x
+    GOPACKAGENAME: github.com/dinurp/auth-route-service
+  

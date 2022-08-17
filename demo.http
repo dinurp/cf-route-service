@@ -1,0 +1,59 @@
+// SPDX-FileCopyrightText: 2022 2022 Dinu Pavithran <dinu.pavithran@yahoo.com>
+//
+// SPDX-License-Identifier: Apache-2.0
+
+###
+# @name with_no_auth
+# @expect_status 401
+GET {{app_url}}
+
+###
+# @name get_with_auth
+# @expect_status 200
+GET {{app_url}}
+Authorization: oauth2 code
+
+###
+# @name get_with_auth_code_flow
+# @expect_status 200
+GET {{app_url}}
+Authorization: oauth2 code
+
+###
+# @name get_with_auth_2
+# @expect_status 200
+GET {{app_url}}/long/path/to/a/deep/resource/and?parameter-one=1&parameter-2=two
+Authorization: oauth2 code
+
+
+###
+# @name post_with_auth
+# @expect_status 200
+POST {{app_url}}/long/path/to/a/deep/resource/and?parameter-one=1&parameter-2=two
+Authorization: oauth2 code
+Content-Type: application/json
+
+{
+    "john": "a name",
+    "1": 1,
+    "inner object": {
+        "an": "apple"
+    },
+    "array with a few values": [
+        1,2,34,
+        "one", "two", "three and four",
+        true
+    ]
+
+
+}
+
+###
+# @name put_with_auth
+# @expect_status 200
+PUT {{app_url}}/1/2/3/a_long_path_segement/followed_by_another%20%20segement
+Authorization: oauth2 code
+Content-Type: text/plain
+
+< README.md
+

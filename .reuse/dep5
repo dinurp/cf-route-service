@@ -1,0 +1,12 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: dinurp/auth-route-service
+Upstream-Contact: Dinu Pavithran <dinurp@yahoo.com>
+Source: https://github.com/dinurp/auth-route-service
+
+Files: README.md .httpyac.js
+Copyright: 2022 Dinu Pavithran <dinurp@yahoo.com>
+License: Apache-2.0
+
+Files: **/go.sum *.env *.gitignore
+Copyright: 2022 Dinu Pavithran <dinurp@yahoo.com>
+License: Apache-2.0
