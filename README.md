@@ -2,7 +2,7 @@
 
 This route service authenticates requests before forwarding. Authentication uses [SAP/cloud-security-client-go](https://github.com/SAP/cloud-security-client-go). So it expects to be bound to an instance of Identity service. It authenticates requests with tokens for this instance. 
 
-[![REUSE status](https://api.reuse.software/badge/github.com/dinurp/auth-route-service)](https://api.reuse.software/info/github.com/dinurp/auth-route-service)
+[![REUSE status](https://api.reuse.software/badge/github.com/dinurp/cf-route-service)](https://api.reuse.software/info/github.com/dinurp/cf-route-service)
 
 ## Route Service Overview
 
